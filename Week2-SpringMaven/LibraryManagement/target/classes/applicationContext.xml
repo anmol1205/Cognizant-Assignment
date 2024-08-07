@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    
+    <bean id="bookRepository" class="com.example.repository.BookRepository">
+        
+    </bean>
+
+    <!-- Define BookService bean and inject BookRepository -->
+    <bean id="bookService" class="com.example.service.BookService">
+        <property name="bookRepository" ref="bookRepository"/>
+    </bean>
+
+</beans>
